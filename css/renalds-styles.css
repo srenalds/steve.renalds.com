@@ -1,0 +1,89 @@
+#topPagecontent {
+  max-width: 100%;
+  min-height: 100px;
+  max-height: 200px;
+  padding: 5px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d3d0bc+0,c9c190+40,b7ad70+100 */
+background: #d3d0bc; /* Old browsers */
+background: -moz-linear-gradient(top,  #d3d0bc 0%, #c9c190 40%, #b7ad70 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d0bc), color-stop(40%,#c9c190), color-stop(100%,#b7ad70)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #d3d0bc 0%,#c9c190 40%,#b7ad70 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #d3d0bc 0%,#c9c190 40%,#b7ad70 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #d3d0bc 0%,#c9c190 40%,#b7ad70 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #d3d0bc 0%,#c9c190 40%,#b7ad70 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d0bc', endColorstr='#b7ad70',GradientType=0 ); /* IE6-9 */
+}
+#topPageContent img { 
+  max-width: 98%; 
+  max-height: 130px; 
+  min-height: 40px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  height: auto; 
+} 
+
+#homeGrid .personal {
+  background: #BA4117;
+  color: #FFFFFF;
+}
+#homeGrid .dba {
+  background: #1947D1;
+  color: #FFFFFF;
+}
+#homeGrid .datalogic {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d3d0bc+0,c9c190+40,b7ad70+100 */
+background: #d3d0bc; /* Old browsers */
+background: -moz-linear-gradient(top,  #d3d0bc 0%, #c9c190 40%, #b7ad70 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d0bc), color-stop(40%,#c9c190), color-stop(100%,#b7ad70)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #d3d0bc 0%,#c9c190 40%,#b7ad70 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #d3d0bc 0%,#c9c190 40%,#b7ad70 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #d3d0bc 0%,#c9c190 40%,#b7ad70 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #d3d0bc 0%,#c9c190 40%,#b7ad70 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d0bc', endColorstr='#b7ad70',GradientType=0 ); /* IE6-9 */
+  color: #000000;
+}
+#homeGrid .datalogic a {
+  text-decoration: none;
+  color: #000000;
+}
+#homeGrid .personal a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+#homeGrid .datalogic img {
+  max-width: 98%;
+  max-height: 130px;
+  min-height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: auto;
+}
+
+md-grid-tile {
+  transition: all 400ms ease-out 50ms;
+}
+.orthodox {
+  background: #2440F2;
+  color: #FFFFFF;
+}
+.orthodox a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.sports {
+  background: #773141;
+  color: #FFB612;
+}
+.politics {
+  background: #254117;
+  color: #FFFFFF;
+}
+.technology {
+  background: #6D758D;
+  color: #FFFFFF;
+}
+.about {
+  background: black;
+  color: #FFFFFF;
+}

@@ -1,0 +1,42 @@
+<body ng-app="Renalds">
+  <div ng-controller="RenaldsController">
+    <md-toolbar md-scroll-shrink>
+      <div class="md-toolbar-tools">
+        <md-button ng-click="setRoute('/')">
+          <md-icon aria-label="Go Home" md-svg-icon="img/icons/ic_home_black_24px.svg"></md-icon>Home
+        </md-button>
+        <md-button ng-click="setRoute('/Resume')">
+          <md-icon aria-label="Go to Resume" md-svg-icon="img/icons/ic_chevron_right_black_24px.svg"></md-icon>Resume
+        </md-button>
+        <md-button>
+          <md-icon aria-label="Download Resume as PDF" md-svg-icon="img/icons/ic_chevron_right_black_24px.svg"></md-icon>
+          <a target='_blank' href='files/SteveRenalds.pdf' download='files/SteveRenalds.pdf'>Download PDF</a>
+        </md-button>
+      </div>
+    </md-toolbar>
+  </div>
+  <div class="md-padding" ng-controller="DataController">
+    <md-content flex class="md-padding" layout="row">
+      <div layout="column">
+        <h2 class="md-title">Experience</h2>
+        <div ng-repeat="x in data.experience">
+          <div layout-align="start start" layout="row">
+            <div flex-gt-lg="10" flex-gt-sm="15" flex-sm="25" flex-order="1" class="md-body-2" layout="column"><i>
+              <div>{{ x.start }} -</div><div>{{ x.end }}</div></i>
+            </div>
+            <div flex flex-order="2" layout="column">
+              <div layout="row" layout-align="space-between start">
+                <div class="md-body-2"><a href="{{ x.client.url }}" target="_blank">{{x.client.name}}</a></div>
+                <div class="md-body-2">{{ x.location }}</div>
+              </div>
+              <div class="md-body-2">{{ x.role }}</div>
+              <div class="md-body-1">Environment: {{ x.environment }} </div>
+              <div class="md-body-1" ng-bind-html="x.content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </md-content>
+  </div>
+</body>
+

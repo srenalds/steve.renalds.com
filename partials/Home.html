@@ -1,0 +1,103 @@
+<body ng-app="Renalds">
+  <div ng-controller="RenaldsController">
+    <div flex>
+      <md-grid-list id="homeGrid" class="md-whiteframe-z5 md-padding"
+        md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-gutter="20px"
+        md-row-height="16:9">
+        <md-grid-tile flex-order="1" ng-click="setRoute('/Resume')"
+          class="orthodox md-whiteframe-z5 md-padding"
+          md-rowspan-sm="4" md-rowspan-gt-sm="3"
+          md-rowspan-gt-md="2"  md-rowspan-gt-lg="3"
+          md-colspan="2">
+          <md-grid-tile-header class="md-padding">
+            <div class="md-title md-padding">
+              Professional
+            </div>
+          </md-grid-tile-header>
+          <div class="md-padding md-body-2">
+            I'm an Oracle Database Administrator with many years serving the Public & Private Sectors, and I've done quite a bit more. You can check out my resume, work history, and even download a pdf copy of it here.
+          </div>
+        </md-grid-tile>
+        <md-grid-tile flex-order="2"
+          class="personal md-whiteframe-z5 md-padding"
+          md-rowspan-sm="5" md-rowspan-gt-sm="3"
+          md-rowspan-gt-md="2"  md-rowspan-gt-lg="3"
+          md-colspan="2">
+          <md-grid-tile-header class="md-padding">
+            <a ng-href="http://twitter.com/SteveRenalds" target="_blank">
+            <div class="md-title md-padding">
+              Social Media 
+            </div>
+            </a>
+          </md-grid-tile-header>
+          <a ng-href="http://twitter.com/SteveRenalds" target="_blank">
+          <div class="md-padding md-body-2">
+            I created a new personal twitter account and you can check it out by clicking here. The timeline is embedded in the pane to the right. If you can't see it, feel free to click the twitter logo at the top right corner of the page.
+          </div>
+          </a>
+        </md-grid-tile>
+        <md-grid-tile flex-order="3" ng-click="setRoute('/About')"
+          class="about md-padding"
+          md-rowspan-sm="8" md-rowspan-gt-sm="5"
+          md-rowspan-gt-md="4"  md-rowspan-gt-lg="5"
+          md-colspan="2">
+          <md-grid-tile-header class="about md-padding">
+            <div class="md-title md-padding">
+              Current Projects 
+            </div>
+          </md-grid-tile-header>
+          <div class="md-padding md-body-2">
+            This section describes some of the current projects that I'm working on, both personal and professional:<ul><li>DevOps/Automation Projects</li><li>This website & the DataLogicIT website</li><li>Attributions/Links to resources that I use</li><li>Links to my github with source code of some of my projects</li><li>Thoughts on future projects I may be working on</li></ul>
+          </div>
+        </md-grid-tile>
+        <md-grid-tile flex-order="4" ng-click="setRoute('/Interests')"
+          class="technology md-whiteframe-z5 md-padding"
+          md-rowspan-sm="3" md-rowspan-gt-sm="3"
+          md-rowspan-gt-md="2"  md-rowspan-gt-lg="1"
+          md-colspan="2">
+          <md-grid-tile-header class="md-padding">
+            <div class="md-title md-padding">
+              Interests
+            </div>
+          </md-grid-tile-header>
+          <div class="md-padding md-body-2">
+            Click here for all my interests concerning Faith, Politics, the DMV, Hobbies & other Amusements.
+          </div>
+        </md-grid-tile>
+        <md-grid-tile flex-order="5" class="datalogic md-whiteframe-z5 md-padding"
+          md-rowspan-sm="3" md-rowspan-gt-sm="3"
+          md-rowspan-gt-md="3" md-rowspan-gt-lg="3"
+          md-colspan="2">
+          <md-grid-tile-header class="md-padding">
+          <a href="http://renalds.com/DataLogicIT" target="_blank">
+            <div class="md-padding" hide show-gt-md>
+              <img src="img/DataLogicitLogo.png" alt="DataLogicIT" title="DataLogic Information Technologies"/>
+            </div>
+            <span class="md-title" hide-gt-md>DataLogicIT</span>
+          </a>
+          </md-grid-tile-header>
+          <a href="http://renalds.com/DataLogicIT" target="_blank">
+          <div class="md-padding md-body-2">
+            DataLogic Information Technologies, LLC was founded nearly a decade ago by Sophia and I. Thank God, we've had some really great clients and partners over the years. You can check out our site and read more about it here.
+          </div>
+          </a>
+        </md-grid-tile>
+        <md-grid-tile flex-order="6" ng-click="setRoute('/Links')"
+          class="politics md-whiteframe-z5 md-padding"
+          md-rowspan-sm="2" md-rowspan-gt-sm="2"
+          md-rowspan-gt-md="2" md-rowspan-gt-lg="1"
+          md-colspan="2">
+          <md-grid-tile-header class="md-padding">
+            <div class="md-title md-padding">
+              Links 
+            </div>
+          </md-grid-tile-header>
+          <div class="md-padding md-body-2">
+            You can jump directly to the Links page by clicking here. 
+          </div>
+        </md-grid-tile>
+      </md-grid-list>
+    </div>
+  </div>
+</body>
+

@@ -1,0 +1,96 @@
+<html lang="en" ng-app="Renalds">
+  <head>
+    <link rel="stylesheet" href="css/angular-material.min.css">
+    <link rel="stylesheet" href="css/renalds-styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <meta name="viewport" content="initial-scale=1" />
+  </head>
+  <body ng-controller="RenaldsController">
+    <div layout="column">
+      <md-content flex id="topPageContent" class="md-whiteframe-z5" layout="row" layout-align="space-between start">
+        <div flex="15" flex-gt-sm="10" flex-gt-md="5">
+          <md-menu>
+            <md-button aria-label="Menu" class="md-icon-button" ng-click="$mdOpenMenu()">
+              <md-icon md-menu-origin md-svg-icon="img/icons/ic_menu_black_24px.svg"></md-icon>
+            </md-button>
+            <md-menu-content width="4">
+              <md-menu-item>
+                <md-button ng-click="setRoute('/')">
+                  <md-icon md-svg-icon="img/icons/ic_home_black_24px.svg" md-menu-align-target></md-icon>
+                  Home
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                    <md-button ng-click="setRoute('/Resume')">
+                  <md-icon md-svg-icon="img/icons/ic_chevron_right_black_24px.svg"></md-icon>
+                  Resume
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="setRoute('/WorkHistory')">
+                  <md-icon md-svg-icon="img/icons/ic_chevron_right_black_24px.svg"></md-icon>
+                  Work History
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="setRoute('/Interests')">
+                  <md-icon md-svg-icon="img/icons/ic_chevron_right_black_24px.svg"></md-icon>
+                  Interests
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="setRoute('/Links')">
+                  <md-icon md-svg-icon="img/icons/ic_chevron_right_black_24px.svg"></md-icon>
+                  Links
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+        </div>
+        <div flex-sm="70" flex-gt-sm="80" flex-gt-md="90" layout="row" layout-sm="column" layout-align-sm="center center" layout-align="space-between start">
+          <div class="md-body-2" id="leftTop" flex-sm="65" flex-gt-sm="35" layout="column">
+            <div class="md-title" ng-click="setRoute('/')">Steven P. Renalds</div>
+<!--        <div hide-sm><script src="js/address.js"></script></div>    -->
+            <script src="js/email.js"></script>
+          </div>
+          <div show-gt-md flex="25">
+            <a href="http://renalds.com/DataLogicIT" target="_blank"><img src="img/DataLogicitLogo.png" alt="DataLogicIT" hide show-gt-md title="DataLogic Information Technologies"/></a>
+          </div>
+          <div class="md-body-2" id="rightTop" hide-sm flex-gt-sm="45" flex-gt-md="40" layout="column" layout-align="end end" layout-align-sm="start start">
+            <a class="md-title" style="text-decoration:none;" href="http://renalds.com/DataLogicIT" target="_blank">DataLogic IT, LLC</a>
+            Sr. Oracle Database Consultant<br>
+            <span ng-click="showDialog($event,'Clearance Information')"><u>Clearance Information</u></span>
+            US Citizen
+          </div>
+        </div>
+        <div layout-align="start end" flex="15" flex-gt-sm="10" flex-gt-md="5">
+          <md-button ng-click="toggleRight()" class="md-icon-button md-primary md-hue-2">
+            <md-icon aria-label="Twitter Bar" md-svg-icon="img/icons/twitter.svg"></md-icon>
+          </md-button>
+        </div>
+      </md-content>
+      <md-content layout="row" class="md-padding md-primary">
+        <div flex layout-fill layout-padding ng-view></div>
+        <md-sidenav flex="20" class="md-sidenav-right md-padding md-whiteframe-z5" md-component-id="right" md-is-locked-open="lockRight && $mdMedia('gt-lg')">
+          <md-content flex class="md-padding" layout-fill>
+            <a class="twitter-timeline" data-widget-id="631535848526196736" ng-href="https://twitter.com/SteveRenalds" data-screen-name="SteveRenalds" data-show-replies="true">Tweets by SteveRenalds</a>
+            <a class="twitter-follow-button" ng-href="https://twitter.com/SteveRenalds" data-size="large">Follow @SteveRenalds</a>
+            <p><b>For what can't be said in 140 characters: <script src="js/email.js"></script></b></p>
+          </md-content>
+        </md-sidenav>
+      </md-content>
+    </div>
+  </div>
+  <!-- Angular Material Dependencies -->
+  <script src="js/angular/angular.min.js"></script>
+  <script src="js/angular/angular-animate.min.js"></script>
+  <script src="js/angular/angular-aria.min.js"></script>
+  <script src="js/angular/angular-material.min.js"></script>
+  <script src="js/angular/angular-route.min.js"></script>
+  <script src="js/angular/angular-sanitize.min.js"></script>
+  <script src="js/firebase/firebase.js"></script>
+  <script src="js/firebase/angularfire.min.js"></script>
+  <script src="js/wrapper.js"></script>
+  <script src="js/twitter.js"></script>
+  </body>
+</html>

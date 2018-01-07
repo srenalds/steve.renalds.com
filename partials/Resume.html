@@ -1,0 +1,70 @@
+<body ng-app="Renalds">
+  <div ng-controller="RenaldsController">
+    <md-toolbar md-scroll-shrink>
+      <div class="md-toolbar-tools">
+        <md-button ng-click="setRoute('/')">
+          <md-icon aria-label="Go Home" md-svg-icon="img/icons/ic_home_black_24px.svg"></md-icon>Home
+        </md-button>
+        <md-button ng-click="setRoute('/WorkHistory')">
+          <md-icon aria-label="Go to Work History" md-svg-icon="img/icons/ic_chevron_right_black_24px.svg"></md-icon>Work History
+        </md-button>
+        <md-button>
+          <md-icon aria-label="Download Resume as PDF" md-svg-icon="img/icons/ic_chevron_right_black_24px.svg"></md-icon>
+          <a target='_blank' href='files/SteveRenalds.pdf' download='files/SteveRenalds.pdf'>Download PDF</a>
+        </md-button>
+      </div>
+    </md-toolbar>
+  </div>
+<div ng-controller="DataController">
+  <md-button ng-click="toggleLeft()" hide-gt-md>
+    <md-icon aria-label="Toggle SideNav Bar" md-svg-icon="img/icons/ic_chevron_right_black_24px.svg"></md-icon>Skills
+  </md-button>
+  <div layout="row">
+  <md-sidenav layout="column" flex-gt-lg="33" flex-gt-md="40" flex class="md-sidenav-left md-whiteframe-z5" md-component-id="left" md-is-locked-open="lockLeft && $mdMedia('gt-md')">
+    <div ng-controller="DataController">
+      <div ng-repeat="(id,subheads) in data.skills">
+        <div class="md-padding"><h2 class="md-title">{{ subheads.subhead }}</h2>
+          <div layout="row" layout-align="space-between start" ng-repeat="line in subheads.lines">
+            <div class="md-body-2" id="left">{{ line.left }}</div>
+            <div class="md-body-2" id="right">{{ line.right }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </md-sidenav>
+  <md-content flex class="md-padding" layout="row">
+    <div layout="column">
+      <h2 class="md-title"><a style="text-decoration:none;" href="http://renalds.com/DataLogicIT" target="_blank">DataLogic Information Technologies, LLC</a></h2>
+      <div class="md-padding">
+DataLogic IT, LLC provides Oracle Database consulting services for Government and Commercial clients. The company was founded by Steve and Sophia Renalds in March 2006.<br>
+Companies Supported: Accenture, Qinetiq NA, Unisys, Intergraph, Preferred Systems Solutions<br>
+Federal Government Agencies Supported: <span ng-click="showDialog($event,'Agency Information')"><u>Intelligence Agency</u></span>, <span ng-click="showDialog($event,'Agency Information')"><u>Law Enforcement Agency</u></span>, Defense Logistics Agency, US Customs & Border Protection
+      </div>
+      <h2 class="md-title">Summary</h2>
+      <div class="md-padding">
+Steve is an Oracle Database Administrator and IT consultant with over 20 years of experience supporting IT projects for Federal Agencies and corporations.  During the last 7 years, Steve has been providing engineering and team leadership to an Accenture data center project for an unnamed federal intelligence agency.  Steve contributed database architectural design aspects to the winning proposal for a federal law enforcement project for new infrastructure and data migration support.  Outside of his experience specific to Oracle, Steve has supported research and development projects focused on Data Center automations and delivering database services to the cloud.
+      </div>
+      <h2 class="md-title">Client/Work History</h2>
+      <div class="md-padding">
+        <div ng-repeat="x in data.experience">
+          <div layout-align="start start" layout="row">
+            <div flex-gt-lg="10" flex-gt-sm="15" flex-sm="25" flex-order="1" class="md-body-2" layout="column">
+              <div>{{ x.start }} -</div><div>{{ x.end }}</div>
+            </div>
+            <div flex flex-order="2" layout="column">
+              <div layout="row" layout-align="space-between start">
+                <div class="md-body-2">{{ x.role }}</div>
+                <div class="md-body-2"><a href="{{ x.client.url }}" target="_blank">{{x.client.name}}</a></div>
+              </div>
+              <div class="md-body-1">Summary: {{ x.excerpt }}</div>
+              <div class="md-body-1">Environment: {{ x.environment }} </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </md-content>
+</div>
+</div>
+</body>
+
